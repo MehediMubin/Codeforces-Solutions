@@ -1,36 +1,28 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-int main()
-{
-	int n;
-	char str[] = "I hate";
-	char s[] = "I love";
-	cin >> n;
-	if (n == 1) {
-		cout << "I hate it" << endl;
-	}
-	else {
-		for (int i = 1; i <= n; i++) {
-			if (i != n) {
-				if (i % 2 != 0) {
-					cout << str << " " << "that ";
-				}
-				else if (i % 2 == 0) {
-					cout << s << " " << "that ";
-				}
-			}
-			if (i == n) {
-				if (i % 2 == 0) {
-					cout << s << " " << "it" << endl;
-				}
-				else if (i % 2 != 0) {
-					cout << str << " " << "it" << endl;
-				}
-			}
-		}
-	}
+#define fread freopen("in.txt", "r", stdin)
+#define fwrite freopen("out.txt", "w", stdout)
 
-	return 0;
+int main ()
+{
+    int n;
+    scanf("%d", &n);
+    if (n == 1) {
+        puts("I hate it");
+    }
+    else {
+        for (int i = 1; i <= n; i++) {
+            if (i == n) {
+                if (i % 2 == 0) puts("I love it");
+                else puts("I hate it");
+                break;
+            }
+            if (i % 2 == 0) cout << "I love that ";
+            else cout << "I hate that ";
+        }
+    }
+
+    return 0;
 }
