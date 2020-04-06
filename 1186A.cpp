@@ -1,16 +1,18 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-int main()
-{
-	int n, m, k;
-	cin >> n >> m >> k;
-	int max = (m < k) ? m : k;
-	if (max < n) 
-		cout << "No" << endl;
-	else 
-		cout << "Yes" << endl;
+#define fread freopen("in.txt", "r", stdin)
+#define fwrite freopen("out.txt", "w", stdout)
 
-	return 0;
+int main ()
+{
+    int n, m, k;
+    scanf("%d %d %d", &n, &m, &k);
+
+    if (n > m || n > k) puts("No");
+
+    else puts("Yes");
+
+    return 0;
 }
