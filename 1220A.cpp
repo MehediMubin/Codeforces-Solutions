@@ -22,7 +22,7 @@ int main ()
         int zero = 0;
         for (int i = 0; i < n; i++) {
             if (str[i] == 'n') printf("%d ", 1);
-            else if (str[i] == 'r') zero++;
+            else if (str[i] == 'z') zero++;
         }
         for (int i = 0; i < zero; i++) printf("%d ", 0);
     }
