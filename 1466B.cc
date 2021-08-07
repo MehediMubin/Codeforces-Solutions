@@ -20,6 +20,7 @@ int main ()
         cin >> n;
 
         vector <int> v(n);
+        for (auto &i : v) cin >> i;
         sort(all(v));
         reverse(all(v));
         for (int i = 0; i < v.size(); i++) {
