@@ -20,12 +20,6 @@ int main ()
         cin >> n;
 
         vector <int> v(n);
-        unordered_map <int, int> mp;
-        for (auto &i : v) {
-            cin >> i;
-            mp[i]++;
-        }
-
         sort(all(v));
         reverse(all(v));
         for (int i = 0; i < v.size(); i++) {
@@ -37,7 +31,7 @@ int main ()
                 if (v[i - 1] != (v[i] + 1)) v[i]++;
             }
         }
-        
+
         set <int> s;
         for (auto i : v) s.insert(i);
         cout << s.size() << nl;
